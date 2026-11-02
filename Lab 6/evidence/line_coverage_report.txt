@@ -1,0 +1,7 @@
+Command: python run_lab6_coverage.py
+Suite: line coverage
+
+Line coverage suite: PASS
+Application statements: 31/31 covered (100.0%)
+Application branch outcomes: 38/38 covered (100.0%)
+

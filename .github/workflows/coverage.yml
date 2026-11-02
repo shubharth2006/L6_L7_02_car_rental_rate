@@ -20,17 +20,17 @@ jobs:
       - name: Line coverage
         run: |
           coverage run -m pytest CodeCoverageTest_car_rental_rate_application.py
-          coverage report -m | tee line_coverage_report.txt
+          coverage report -m | tee evidence/line_coverage_report.txt
       - name: Branch coverage
         run: |
           coverage erase
           coverage run --branch -m pytest BranchCoverageTest_car_rental_rate_application.py
-          coverage report -m | tee branch_coverage_report.txt
+          coverage report -m | tee evidence/branch_coverage_report.txt
       - name: Upload coverage evidence
         uses: actions/upload-artifact@v4
         with:
           name: lab6-coverage-reports
           path: |
-            Lab 6/line_coverage_report.txt
-            Lab 6/branch_coverage_report.txt
+            evidence/line_coverage_report.txt
+            evidence/branch_coverage_report.txt
 

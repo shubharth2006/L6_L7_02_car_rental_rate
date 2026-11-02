@@ -1,7 +1,12 @@
-Command: python run_lab6_coverage.py
-Suite: line coverage
+Command: python -m coverage run -m pytest CodeCoverageTest_car_rental_rate_application.py
+Command: python -m coverage report -m
 
-Line coverage suite: PASS
-Application statements: 31/31 covered (100.0%)
-Application branch outcomes: 38/38 covered (100.0%)
+...                                                                      [100%]
+3 passed in 0.03s
+Name                                              Stmts   Miss  Cover   Missing
+-------------------------------------------------------------------------------
+CodeCoverageTest_car_rental_rate_application.py      18      0   100%
+car_rental_rate.py                                   51      0   100%
+-------------------------------------------------------------------------------
+TOTAL                                                69      0   100%
 

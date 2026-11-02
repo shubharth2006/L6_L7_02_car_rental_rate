@@ -1,11 +1,22 @@
 # Lab 6 Coverage Analysis
 
-The application was exercised through the separate line-coverage and branch-coverage pytest suites. Because the local runtime did not have network access to install third-party packages, `run_lab6_coverage.py` provides a local dynamic verifier for the same test cases. It traces application statements and records both outcomes for every decision and loop.
+The application was exercised through separate pytest suites for line coverage and branch coverage. The reports below were produced with the standard `coverage` commands required by the lab.
 
 Results:
 
-- Line suite: 31/31 application statements, 100.0%; 38/38 measured branch outcomes, 100.0%.
-- Branch suite: 31/31 application statements, 100.0%; 38/38 measured branch outcomes, 100.0%.
+- Line coverage suite: 3 tests passed; `car_rental_rate.py` reached 51/51 statements (100%).
+- Branch coverage suite: 14 tests passed; `car_rental_rate.py` reached 51/51 statements and 36/36 branch outcomes (100%).
 
-The evidence files contain the terminal output from the verifier command.
+The terminal-result screenshots (`line_coverage_terminal.png` and `branch_coverage_terminal.png`) and captured command output are in `evidence/`.
+
+## Commands
+
+```text
+python -m coverage run -m pytest CodeCoverageTest_car_rental_rate_application.py
+python -m coverage report -m
+
+python -m coverage erase
+python -m coverage run --branch -m pytest BranchCoverageTest_car_rental_rate_application.py
+python -m coverage report -m
+```
 
